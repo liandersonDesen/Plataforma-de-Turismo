@@ -1,0 +1,26 @@
+{
+  "name": "plataforma-de-turismo",
+  "version": "1.0.0",
+  "description": "desenvolver uma API REST para uma plataforma de turismo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liandersonDesen/Plataforma-de-Turismo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liandersonDesen/Plataforma-de-Turismo/issues"
+  },
+  "homepage": "https://github.com/liandersonDesen/Plataforma-de-Turismo#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "zod": "^3.24.4"
+  }
+}
