@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import { comparar, hashPassword } from "../utils/auth.js";
+import { comparar, hashPassword, gerarToken } from "../utils/auth.js";
 
 const prisma = new PrismaClient()
 
@@ -20,10 +20,12 @@ export const logarUsuario = async (email,password) =>{
         if(user){
          const compared= await comparar(password,user.password)
                 if (compared) {
+                    const Token = gerarToken(user)
                     return {
                         acesso:"liberado",          
                         name:user.name,
                         email:user.email,
+                        token:Token
                     }
                 }else{
                     return 'senha ou email incorreto'
