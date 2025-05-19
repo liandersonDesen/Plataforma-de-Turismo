@@ -36,7 +36,7 @@ export const GetPlaces = async (req,res) => {
 export const UpdatePlace = async (req,res) => {
     try {
         const { name,description,address,type,rating } = req.body
-        const id = req.params.id;
+        const id = Number(req.params.id);
         const LugarAtualizado = await updatePlaceService(id,name,description,address,type,rating)
     
         res.status(200).json(LugarAtualizado)
@@ -48,7 +48,7 @@ export const UpdatePlace = async (req,res) => {
 
 export const DeletePlace = async (req,res) => {
     try {
-        const id = req.params.id;
+        const id = Number(req.params.id);
         const LugarDeletado = await DeletePlaceService(id)
     
         res.status(200).json(LugarDeletado)

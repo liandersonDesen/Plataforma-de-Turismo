@@ -23,7 +23,7 @@ export const GetServiceFromType = async (type)=>{
 
 
 export const updatePlaceService = async (id,name,description,address,type,rating)=>{
-    return await prisma.place.create({
+    return await prisma.place.update({
         where:{id},
         data:{
             name,
